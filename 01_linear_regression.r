@@ -8,7 +8,7 @@ cat("\014")   # Clear console
 # Fit linear regession ---------------------------------------------------------
 # Visualize the data
 pairs(iris[1:4], 
-      main = "Anderson's Iris Data -- 3 species", 
+      main = "Iris Data", 
       pch = 21, 
       bg = c("red", "green3", "blue")[unclass(iris$Species)], lower.panel=NULL, 
       labels=c("Sepal.Length","Sepal.Width","Petal.Length","Petal.Width"), 
@@ -27,7 +27,7 @@ plot(iris$Petal.Length,
      iris$Petal.Width,
      pch=21,
      bg=c("red","green3","blue")[unclass(iris$Species)],
-     main="Edgar Anderson's Iris Data",
+     main="Linear regression for Iris Data",
      xlab="Petal length",
      ylab="Petal width")
 

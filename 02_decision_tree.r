@@ -5,15 +5,18 @@
 rm(list=ls()) # Delete all variables
 cat("\014")   # Clear console
 
-# Fit decision tree -----------------------------------------------------------
+# Fit decision tree ------------------------------------------------------------
 # Get decision tree package
 require("party") 
 
 # Visualize the data
-plot(iris$Petal.Length, iris$Petal.Width, 
-     pch=21,
-     bg=c("red","green3","blue")[unclass(iris$Species)], 
-     main="Manadotory Iris Data")
+pairs(iris[1:4], 
+      main = "Anderson's Iris Data -- 3 species", 
+      pch = 21, 
+      bg = c("red", "green3", "blue")[unclass(iris$Species)], lower.panel=NULL, 
+      labels=c("Sepal.Length","Sepal.Width","Petal.Length","Petal.Width"), 
+      font.labels=2,
+      cex.labels=2.5) 
 
 # Inspect the data
 print(head(iris))

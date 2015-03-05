@@ -13,7 +13,8 @@ require("party")
 pairs(iris[1:4], 
       main = "Iris Data", 
       pch = 21, 
-      bg = c("red", "green3", "blue")[unclass(iris$Species)], lower.panel=NULL, 
+      bg = c("red", "green3", "blue")[unclass(iris$Species)],
+      lower.panel=NULL, 
       labels=c("Sepal.Length","Sepal.Width","Petal.Length","Petal.Width"), 
       font.labels=2,
       cex.labels=2.5) 

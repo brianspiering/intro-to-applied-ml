@@ -11,7 +11,7 @@ require("party")
 
 # Visualize the data
 pairs(iris[1:4], 
-      main = "Anderson's Iris Data -- 3 species", 
+      main = "Iris Data", 
       pch = 21, 
       bg = c("red", "green3", "blue")[unclass(iris$Species)], lower.panel=NULL, 
       labels=c("Sepal.Length","Sepal.Width","Petal.Length","Petal.Width"), 
@@ -22,11 +22,11 @@ pairs(iris[1:4],
 print(head(iris))
 print(unique(iris$Species))
 
-# Fit a decision tree
+# Fit decision tree
 iris_ctree <- ctree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, 
                     data=iris)
 
-# Visualize a decision tree
+# Visualize decision tree
 plot(iris_ctree,
      type="simple",
      main="Decision Tree of Iris Data by Species")

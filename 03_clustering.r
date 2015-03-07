@@ -31,7 +31,7 @@ iris_no_labels$Species <- NULL
 n_clusters <- 3
 kc <- kmeans(iris_no_labels, 
              n_clusters)
-# print(kc)
+print(kc) # Inspect the clusters
 
 # Visualize the clusters
 plot(iris[c("Sepal.Length", "Sepal.Width")], 

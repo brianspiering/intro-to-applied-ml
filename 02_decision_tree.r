@@ -7,7 +7,7 @@ graphics.off() # Close all open plots
 cat("\014")   # Clear console
 require("party") # Get decision tree package
 
-# Visualize the data ------------------------------------------------------------
+# Visualize the data -----------------------------------------------------------
 pairs(iris[1:4], 
       main = "Iris Data", 
       pch = 21, 

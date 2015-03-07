@@ -56,7 +56,7 @@ abline(lsfit(iris$Sepal.Length, iris$Sepal.Width)$coefficients,
        col="black")
 
 # Fit a more complex linear regression -----------------------------------------
-linear_regression_model_3 <- lm(iris$Petal.Length ~ iris$Petal.Width 
+linear_regression_model_3 <- lm(iris$Petal.Width ~ iris$Petal.Length
                                 + iris$Sepal.Length
                                 + iris$Sepal.Width)
 print(summary(linear_regression_model_3))

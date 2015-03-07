@@ -1,8 +1,16 @@
+graphics.off() # Close all open plots
+
 # Fit a more complex linear regression -----------------------------------------
 linear_regression_model_3 <- lm(iris$Petal.Length ~ iris$Petal.Width 
                                 + iris$Sepal.Length
                                 + iris$Sepal.Width)
 print(summary(linear_regression_model_3))
+
+# Scatterplot Matrices from the car Package
+library(car)
+scatterplot.matrix(~ iris$Petal.Width +iris$Sepal.Length+iris$Sepal.Width|iris$Petal.Length,
+                   main="Iris Data")
+
 # # Other useful functions 
 # coefficients(fit) # model coefficients
 # confint(fit, level=0.95) # CIs for model parameters 

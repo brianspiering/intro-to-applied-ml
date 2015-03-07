@@ -1,15 +1,13 @@
 # File description -------------------------------------------------------------
-# Simple example of decision tree
+# Simple example of a decision tree
 
 # Setup ------------------------------------------------------------------------
 rm(list=ls()) # Delete all variables
+graphics.off() # Close all open plots
 cat("\014")   # Clear console
+require("party") # Get decision tree package
 
-# Fit decision tree ------------------------------------------------------------
-# Get decision tree package
-require("party") 
-
-# Visualize the data
+# Visualize the data ------------------------------------------------------------
 pairs(iris[1:4], 
       main = "Iris Data", 
       pch = 21, 
@@ -17,13 +15,13 @@ pairs(iris[1:4],
       lower.panel=NULL, 
       labels=c("Sepal.Length","Sepal.Width","Petal.Length","Petal.Width"), 
       font.labels=2,
-      cex.labels=2.5) 
+      cex.labels=1.8) 
 
 # Inspect the data
 print(head(iris))
 print(unique(iris$Species))
 
-# Fit decision tree
+# Fit a decision tree ------------------------------------------------------------
 iris_ctree <- ctree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, 
                     data=iris)
 

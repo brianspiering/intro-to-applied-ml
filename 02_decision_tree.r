@@ -15,11 +15,11 @@ pairs(iris[1:4],
       lower.panel=NULL, 
       labels=c("Sepal.Length","Sepal.Width","Petal.Length","Petal.Width"), 
       font.labels=2,
-      cex.labels=1.8) 
+      cex.labels=1) 
 
 # Inspect the data
 print(head(iris))
-print(unique(iris$Species))
+print(unique(iris$Species)) # We want to predict these species labels
 
 # Fit a decision tree ------------------------------------------------------------
 iris_ctree <- ctree(Species ~ Sepal.Length + Sepal.Width + Petal.Length + Petal.Width, 

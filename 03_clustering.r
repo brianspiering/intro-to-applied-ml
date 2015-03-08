@@ -28,10 +28,9 @@ iris_no_labels <- iris
 iris_no_labels$Species <- NULL
 
 # Apply kmeans to iris
-n_clusters <- 3
+n_clusters <- 4 # Experiment by trying 1, 2, or 4 clusters
 kc <- kmeans(iris_no_labels, 
              n_clusters)
-print(kc) # Inspect the clusters
 
 # Visualize the clusters
 plot(iris[c("Sepal.Length", "Sepal.Width")], 
@@ -40,3 +39,5 @@ points(kc$centers[,c("Sepal.Length", "Sepal.Width")],
        col=1:3, 
        pch=8,
        cex=2)
+
+print(kc) # Inspect the clusters

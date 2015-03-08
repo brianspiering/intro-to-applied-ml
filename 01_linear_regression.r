@@ -26,15 +26,15 @@ cat("\ny = mx + b\n") # Linear model
 # residuals(linear_regression_model_1) # Errors by data point
 
 # Visualize linear regression
-plot(iris$Petal.Length, 
-     iris$Petal.Width,
+plot(iris$Petal.Width, 
+     iris$Petal.Length,
      pch=21,
      bg=c("red","green3","blue")[unclass(iris$Species)],
      main="Linear Regression for Iris Data",
-     xlab="Petal length",
-     ylab="Petal width")
+     xlab="Petal Width",
+     ylab="Petal Length")
 
-abline(lsfit(iris$Petal.Length, iris$Petal.Width)$coefficients, 
+abline(lsfit(iris$Petal.Width, iris$Petal.Length)$coefficients, 
        col="black")
 
 # Fit another simple linear regression -----------------------------------------
